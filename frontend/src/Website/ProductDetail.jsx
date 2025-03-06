@@ -18,7 +18,7 @@ const loadData = async () => {
 
 useEffect(() =>{
     loadData();
-  }, []);
+  }, [id]);
 
 const myBigImage = (item) => {
     setBigImage(item);
@@ -33,21 +33,25 @@ return (
               style={{ width: "20rem" }}>
 
               <Card.Img variant="top"
-                src={`https://localhost:8000/${bigImage}`}
+                src={`http://localhost:8000/${bigImage}`}
                 style={{ height: "200px" }}/>
+  
 
+  
               <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
                 {proData.images && proData.images.length > 0 ? (
                   proData.images.map((item) =>(
-                    <img style={{ cursor: "pointer" }}
+                    <img  key={item}
+                    style={{ cursor: "pointer" }}
                       onClick={() => {
                         myBigImage(item);
                       }}
-                      src={`https://localhost:8000/${item}`}
+                      src={`http://localhost:8000/${item}`}
                       width="50"
                       height="50"
+                      alt="Product"
                     />
-                  ))
+                  ))          
                 ) : (
                   <p>No additional images available.</p>
                 )}

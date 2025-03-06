@@ -48,4 +48,18 @@ const DisplayProduct=async(req,res)=>{
     }
 }
 
-module.exports = { CreateProduct ,DisplayProduct};
+const ProductDataShow= async(req,res)=>{
+  const Product=await ProductModel.findById(req.body.id);
+  res.status(200).send(Product);
+}
+
+const SpecificProductDisplay=async(req,res)=>{
+  const {productcategory}=req.query;
+  const Data=await ProductModel.find({productcategory : productcategory});
+  res.send({Data});
+}
+
+module.exports = { CreateProduct ,
+                   DisplayProduct, 
+                   ProductDataShow,
+                   SpecificProductDisplay};

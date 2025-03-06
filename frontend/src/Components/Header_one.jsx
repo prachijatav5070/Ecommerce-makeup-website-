@@ -9,20 +9,18 @@ import nv4 from '../images/head/lips_icon.png'
 import nv5 from '../images/head/eyes_icon.png'
 import nv6 from '../images/head/face_1.png'
 import nv7 from '../images/head/nails_icon.webp'
-import Banner from '../Components/Banner';
 import { Link } from 'react-router-dom';
 
 const Header_one = () => {
   return (
 <>
-
 <Navbar bg="light" data-bs-theme="light">
         <Container fluid>
           <Nav className="me-auto d-flex justify-content-center flex-wrap gap-4" style={{margin:'auto'}}>
             <Nav.Link as={Link} to="mini" style={{textAlign:'center'}}>
                  <img src={nv1} style={{width:'70px',height:'70px',borderRadius:'50%',objectFit:'cover'}} /> 
                  <p>Minis Corner</p>
-            </Nav.Link>
+            </Nav.Link>  
             <Nav.Link as={Link} to="sale" style={{textAlign:'center'}}>
                  <img src={nv2} style={{width:'70px',height:'70px',borderRadius:'50%',objectFit:'cover'}} /> 
                  <p>Sale</p>
@@ -30,7 +28,7 @@ const Header_one = () => {
             <Nav.Link as={Link} to="face" style={{textAlign:'center'}}>
                  <img src={nv3} style={{width:'70px',height:'70px',borderRadius:'50%',objectFit:'cover'}} /> 
                  <p>Face</p>
-            </Nav.Link>
+            </Nav.Link> 
             <Nav.Link as={Link} to="lips" style={{textAlign:'center'}}>
                  <img src={nv4} style={{width:'70px',height:'70px',borderRadius:'50%',objectFit:'cover'}} /> 
                  <p>Lips</p>
@@ -53,7 +51,7 @@ const Header_one = () => {
 
 
       {/* carosusel is here  */}
-      <Banner/>
+      
 </>  )
 }
 

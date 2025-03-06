@@ -4,13 +4,13 @@ import { FaRupeeSign } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import axios from "axios"; 
  import {useNavigate} from "react-router-dom"
- import Banner from '../Components/Banner'
-const DisplayProduct = () => {
+ import Banner from "../../Components/Banner";
+const Eyes = () => {
     const [products, setProducts] = useState([]); 
     const navigate=useNavigate();
     const loadData = async () => {
         try {
-            let api = "http://localhost:8000/product/Displayproduct";
+            let api = "http://localhost:8000/product/SpecificProductDisplay?productcategory=eyes";
             const response = await axios.get(api);
 
             if (response.data.products && response.data.products.length > 0) {
@@ -34,7 +34,7 @@ const DisplayProduct = () => {
       
         <div className="display-cards-page">
              {location.pathname === "/" && 
-             <Banner />}
+             <Banner/>}
       <Container fluid className="product-container">
         <h2 className="text-center my-4 section-title">
           ✨ Lakme Products ✨
@@ -80,4 +80,4 @@ const DisplayProduct = () => {
     );
 };
 
-export default DisplayProduct;
+export default Eyes;

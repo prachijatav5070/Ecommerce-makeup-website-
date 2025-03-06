@@ -3,3 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* login page */
+.Loginpage{
+    background-image: url('../images/admin/adminbackground.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.signup{
+    background-image: url('../images/admin/adminbackground.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}

@@ -9,6 +9,7 @@ import logo from '../images/head/logo.webp'
 import { Link } from 'react-router-dom';
 import { BsHandbag } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
+import { IoLogIn } from "react-icons/io5";
 
 import { CgProfile } from "react-icons/cg";
 
@@ -25,9 +26,10 @@ const Header = () => {
         <Container>
           <Navbar.Brand> <img src={logo} alt="brand logo" style={{margin:'auto'}} /> </Navbar.Brand>
           <div >
-          <Navbar.Brand > <CiSearch className='icons' style={{ fontSize:'28px' }}/> </Navbar.Brand>
-          <Navbar.Brand > <CgProfile className='icons' /> </Navbar.Brand>
-          <Navbar.Brand > <BsHandbag className='icons' /> </Navbar.Brand>
+          <Navbar.Brand  > <CiSearch className='icons' style={{ fontSize:'28px' }}/> </Navbar.Brand>
+          <Navbar.Brand as={Link} to="signup"> <CgProfile className='icons'/> </Navbar.Brand>
+          <Navbar.Brand as={Link} to="login"> <IoLogIn className='icons'/> </Navbar.Brand>
+          <Navbar.Brand > <BsHandbag className='icons'/> </Navbar.Brand>
           </div>
         </Container>
       </Navbar> 
