@@ -23,11 +23,15 @@ const Header_one = () => {
             </Nav.Link>  
             <Nav.Link as={Link} to="sale" style={{textAlign:'center'}}>
                  <img src={nv2} style={{width:'70px',height:'70px',borderRadius:'50%',objectFit:'cover'}} /> 
-                 <p>Sale</p>
+                 <p>Sale</p> 
             </Nav.Link>
             <Nav.Link as={Link} to="face" style={{textAlign:'center'}}>
                  <img src={nv3} style={{width:'70px',height:'70px',borderRadius:'50%',objectFit:'cover'}} /> 
                  <p>Face</p>
+            </Nav.Link> 
+            <Nav.Link as={Link} to="foundation" style={{textAlign:'center'}}>
+                 <img src={nv3} style={{width:'70px',height:'70px',borderRadius:'50%',objectFit:'cover'}} /> 
+                 <p>Faoundation</p>
             </Nav.Link> 
             <Nav.Link as={Link} to="lips" style={{textAlign:'center'}}>
                  <img src={nv4} style={{width:'70px',height:'70px',borderRadius:'50%',objectFit:'cover'}} /> 

@@ -14,7 +14,7 @@ const Lips = () => {
             const response = await axios.get(api);
 
             if (response.data.products && response.data.products.length > 0) {
-                setProducts(response.data.products); 
+              setProducts(response.data.Data); 
             } 
         } catch (error) {
             console.error("Error fetching products:", error);

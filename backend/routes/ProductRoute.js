@@ -43,5 +43,5 @@ const storage = multer.diskStorage({
 route.post("/createproduct",upload.array('files',10) , ProductController.CreateProduct);
 route.get('/Displayproduct',ProductController.DisplayProduct)
 route.post("/productdatashow", ProductController.ProductDataShow)
-route.post("/Specificproductdisplay",ProductController.SpecificProductDisplay)
+route.get("/Specificproductdisplay",ProductController.SpecificProductDisplay)
 module.exports=route;

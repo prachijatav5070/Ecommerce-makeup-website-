@@ -4,7 +4,6 @@ import { FaRupeeSign } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import axios from "axios"; 
  import {useNavigate} from "react-router-dom"
- import Banner from "../../Components/Banner";
 const Face = () => {
     const [products, setProducts] = useState([]); 
     const navigate=useNavigate();
@@ -12,9 +11,9 @@ const Face = () => {
         try {
             let api = "http://localhost:8000/product/SpecificProductDisplay?productcategory=face";
             const response = await axios.get(api);
-
+           // console.log(response.data.Data)
             if (response.data.products && response.data.products.length > 0) {
-                setProducts(response.data.products); 
+                setProducts(response.data.Data); 
             } 
         } catch (error) {
             console.error("Error fetching products:", error);
@@ -27,14 +26,13 @@ const Face = () => {
 
     const ProductDetail = (id) => {
         navigate(`/proDetail/${id}`);
-      };
+      }; 
 
     return (
 
       
         <div className="display-cards-page">
-             {location.pathname === "/" && 
-             <Banner/>}
+           
       <Container fluid className="product-container">
         <h2 className="text-center my-4 section-title">
           ✨ Lakme Products ✨

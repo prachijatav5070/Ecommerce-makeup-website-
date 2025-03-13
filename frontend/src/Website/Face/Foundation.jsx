@@ -3,38 +3,40 @@ import { FaRupeeSign } from "react-icons/fa";
 
 import React, { useEffect, useState } from "react";
 import axios from "axios"; 
- import {useNavigate} from "react-router-dom"
- import Banner from "../../Components/Banner";
-const Sale = () => {
+import Banner from "../../Components/Banner";
+ import {useLocation, useNavigate} from "react-router-dom"
+const Foundation = () => {
     const [products, setProducts] = useState([]); 
     const navigate=useNavigate();
+    const location=useLocation();
+
     const loadData = async () => {
         try {
-            let api = "http://localhost:8000/product/SpecificProductDisplay?productcategory=sale";
+            let api = "http://localhost:8000/product/SpecificProductDisplay?productcategory=Foundation";
             const response = await axios.get(api);
-
+            console.log(response.data.Data)
+            
             if (response.data.products && response.data.products.length > 0) {
-              setProducts(response.data.Data); 
-            } 
+                setProducts(response.data.Data); 
+            }
         } catch (error) {
             console.error("Error fetching products:", error);
         }
     }; 
- 
+
     useEffect(() => {  
         loadData(); 
     }, []);
 
     const ProductDetail = (id) => {
         navigate(`/proDetail/${id}`);
-      };
+      }; 
 
     return (
 
       
         <div className="display-cards-page">
-             {location.pathname === "/" && 
-             <Banner/>}
+        {location.pathname === "/" && <Banner />}
       <Container fluid className="product-container">
         <h2 className="text-center my-4 section-title">
           ✨ Lakme Products ✨
@@ -80,4 +82,5 @@ const Sale = () => {
     );
 };
 
-export default Sale;
+export default Foundation;
+ 

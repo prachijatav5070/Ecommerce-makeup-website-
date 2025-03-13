@@ -16,6 +16,7 @@ import Lips from "./Website/Lips/Lips";
 import Eyes from "./Website/Eye/Eyes";
 import Signup from "./UserPages/Signup";
 import Login from "./UserPages/Login";
+import Foundation from "./Website/Face/Foundation";
 const App = () => {
   return (
     <BrowserRouter>
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="mini" element={<MinisCorner />} />
           <Route path="sale" element={< Sale />} />
           <Route path="face" element={<Face />} />
+          <Route path="foundation" element={<Foundation/>}/>
           <Route path="lips" element={<Lips />} />
           <Route path="eyes" element={<Eyes/>} />
           <Route path="skin" element={<Skin />} />

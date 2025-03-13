@@ -95,15 +95,17 @@ const UploadProducts = () => {
           </Form.Select>
         </Form.Group>
 
-        <Form.Group className="mb-3">
+        <Form.Group className="mb-3"> 
           <Form.Label>Product Category</Form.Label>
           <Form.Select name="productcategory" value={input.productcategory} onChange={handleInput}>
-            <option>Open this select menu</option>
+          <option>Open this select menu</option>
             <option value="Lipstick">Lipstick</option>
             <option value="Foundation">Foundation</option>
-            <option value="Eyeliner">Eyeliner</option>
+            <option value="EyeLiner">Eye Liner</option>
+            <option value="ComapctPowder">Compact Powder</option>
+            <option value="Skin">Skin</option>
+            <option value="Nails">Nails</option>
             <option value="Mascara">Mascara</option>
-            <option value="Compact Powder">Compact Powder</option>
           </Form.Select>
         </Form.Group>
 
